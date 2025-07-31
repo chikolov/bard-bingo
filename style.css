@@ -7,29 +7,21 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background: #f9f9f9;
-  color: #333;
   margin: 0;
   padding: 0;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  color: #333;
 }
 
 .container {
   padding: 2em;
 }
-
-.bingo-container {
-  width: 100%;
-  max-width: 100vw;
-  padding: 1em 0;
-  display: flex;
-  justify-content: center;
-}
-
 
 .site-header {
   text-align: center;
@@ -57,23 +49,24 @@ body {
 .bingo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 90vmin;
+  grid-template-rows: repeat(5, 1fr);
+  width: 90vmin;  /* Square grid, fits viewport */
   height: 90vmin;
+  margin: 0 auto;
   gap: 0;
 }
 
 .bingo-cell {
-  border: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 1.1em;
+  border: 1px solid #ccc;
+  font-size: 1em;
   color: #c8102e;
   background-color: white;
   transition: background-color 0.3s ease;
-  width: 100%;
-  height: 100%;
+  box-sizing: border-box;
 }
 
 .bingo-cell.selected {
