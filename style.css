@@ -36,11 +36,13 @@ body {
 
 .bingo-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  max-width: 600px;
-  margin: 0 auto;
+  grid-template-columns: repeat(5, 1fr); /* Always 5 columns */
+  gap: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
+
 
 .bingo-cell {
  border: 1px solid #ccc;
