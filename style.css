@@ -1,4 +1,3 @@
-/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -8,91 +7,73 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background: #f9f9f9;
-  width: 100%;
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #333;
-  /* width: 100vw; height: 100vh; text-align: center; */
 }
 
-/* Container */
 .container {
   width: 100%;
-  max-width: 900px;
-  padding: 1.5em 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* padding: 2em; */
+  max-width: 600px;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
-/* Header */
 .site-header {
-  width: 100%;
   text-align: center;
-  margin-bottom: 1.5em;
+  margin: 1em 0;
 }
 
 .site-header h1 {
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
   color: #c8102e;
-  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  margin-bottom: 0.3em;
   font-weight: bold;
-  margin-bottom: 0.4em;
-  /* font-size: 2.5em; */
 }
 
 .site-header h2 {
+  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
   color: #c8102e;
-  font-size: clamp(1.2rem, 5vw, 1.8rem);
   font-weight: normal;
-  /* font-size: 1.8em; */
 }
 
-/* Grid Wrapper */
 .grid-wrapper {
-  width: 100%;
-  max-width: 90vmin;
-  aspect-ratio: 1 / 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; padding: 1rem; */
+  padding: 1rem 0;
 }
 
-/* Bingo Grid */
 .bingo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  width: 100%;
-  height: 100%;
+  width: 90vmin;
+  height: 90vmin;
   gap: 2px;
-  /* width: 90vmin; height: 90vmin; */
 }
 
-/* Bingo Cell */
 .bingo-cell {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0.3em;
   border: 1px solid #ccc;
-  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  font-size: 0.95em;
+  padding: 0.4em;
   color: #c8102e;
   background-color: white;
   transition: background-color 0.3s ease;
-  box-sizing: border-box;
 }
 
 .bingo-cell.selected {
   background-color: #ddd;
 }
 
-/* Popup */
 .popup {
   position: fixed;
   top: 0;
@@ -112,21 +93,18 @@ body {
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   max-width: 90%;
-  font-size: 1em;
   text-align: center;
 }
 
 .popup-content h2 {
   color: #c8102e;
-  font-size: 1.8em;
+  font-size: 2em;
   margin-bottom: 0.5em;
-  /* font-size: 2em; */
 }
 
 .popup-content p {
   font-size: 1.1em;
   color: #333;
-  /* font-size: 1.2em; */
 }
 
 .popup-content button {
@@ -140,16 +118,13 @@ body {
   margin-top: 1em;
 }
 
-/* Footer */
 footer.share-banner {
   background-color: #f2f2f2;
   text-align: center;
-  padding: 1em 0.5em;
+  padding: 1em;
   border-top: 2px solid #c8102e;
   margin-top: 2em;
-  font-size: 1em;
-  width: 100%;
-  /* font-size: 1.1em; */
+  font-size: 1.1em;
 }
 
 .share-banner button {
@@ -161,35 +136,4 @@ footer.share-banner {
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-/* Responsive Fixes */
-@media (max-width: 600px) {
-  .popup-content {
-    padding: 1em;
-    font-size: 1em;
-  }
-
-  .popup-content h2 {
-    font-size: 1.5em;
-  }
-
-  .popup-content p {
-    font-size: 1em;
-  }
-
-  .popup-content button {
-    font-size: 0.95em;
-    padding: 0.6em 1em;
-  }
-
-  footer.share-banner {
-    font-size: 0.95em;
-  }
-
-  .share-banner button {
-    font-size: 0.95em;
-    padding: 0.5em 1em;
-  }
 }
