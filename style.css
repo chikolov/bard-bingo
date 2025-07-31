@@ -52,22 +52,26 @@ body {
 .bingo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 90vmin;
-  height: 90vmin;
+  width: 100%;
+  max-width: 90vmin; /* Square layout limited to viewport */
+  margin: 0 auto;
   gap: 2px;
 }
 
 .bingo-cell {
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   border: 1px solid #ccc;
-  font-size: 0.95em;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   padding: 0.4em;
   color: #c8102e;
   background-color: white;
   transition: background-color 0.3s ease;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .bingo-cell.selected {
