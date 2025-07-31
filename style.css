@@ -9,10 +9,12 @@ body {
   background: #f9f9f9;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: #333;
 }
@@ -47,25 +49,26 @@ body {
 .bingo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: min(90vmin, 100vw);
-  height: min(90vmin, 100vw);
+  grid-template-rows: repeat(5, 1fr);
+  width: 90vmin;  /* Square grid, fits viewport */
+  height: 90vmin;
   margin: 0 auto;
   gap: 0;
-  box-sizing: border-box;
-  touch-action: manipulation;
 }
 
 .bingo-cell {
+  border: 1px solid #ccc;
+  margin: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid #ccc;
-  font-size: 1em;
-  color: #c8102e;
+  font-size: 1.1em;
+  color: #c8102e;  /* red text */
   background-color: white;
   transition: background-color 0.3s ease;
-  box-sizing: border-box;
 }
 
 .bingo-cell.selected {
