@@ -37,19 +37,13 @@ body {
 .bingo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  width: 100vw;               /* Full viewport width */
-  max-width: 500px;           /* Cap it on desktop */
-  aspect-ratio: 1 / 1;        /* Always square: 5x5 layout */
+  aspect-ratio: 1 / 1;              /* Keeps grid perfectly square */
+  width: 100%;
+  max-width: 500px;
   margin: auto;
 }
 
 .bingo-cell {
-  border: 1px solid #ccc;
-  margin: 5px;
-  flex: 1 0 20%;
-  width: 100%;                /* Let grid sizing handle width */
-  height: 100%;               /* Let aspect-ratio keep the square shape */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,8 +51,13 @@ body {
   font-size: 1.1em;
   color: #c8102e;
   background-color: white;
+  border: 1px solid #ccc;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
+
+  /* Make each cell square using aspect-ratio */
+  aspect-ratio: 1 / 1;
+  width: 100%; /* This is handled by the grid, still good to keep */
 }
 
 .bingo-cell.selected {
@@ -151,7 +150,6 @@ body {
   font-size: clamp(1.2rem, 4.5vw, 1.8rem);
 }
 
-/* Responsive bingo grid on small screens */
 @media (max-width: 600px) {
   .bingo-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -161,7 +159,7 @@ body {
   .bingo-cell {
     min-width: auto;
     height: 90px;
-    font-size: 1em;
+    font-size: 0.9em;
     padding: 0.5em;
   }
 
