@@ -128,3 +128,69 @@ footer.share-banner {
   cursor: pointer;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+/* ---------- Responsive Design for Mobile ---------- */
+
+/* Ensure the site scales on smaller devices */
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 1em;
+}
+
+/* Make headers scale better on smaller screens */
+.site-header h1 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+.site-header h2 {
+  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+}
+
+/* Responsive bingo grid on small screens */
+@media (max-width: 600px) {
+  .bingo-grid {
+    grid-template-columns: repeat(3, 1fr); /* fewer columns */
+    gap: 8px;
+  }
+
+  .bingo-cell {
+    min-width: auto;
+    height: 90px;
+    font-size: 1em;
+    padding: 0.5em;
+  }
+
+  .popup-content {
+    padding: 1.5em;
+    font-size: 1em;
+  }
+
+  .popup-content h2 {
+    font-size: 1.5em;
+  }
+
+  .popup-content p {
+    font-size: 1em;
+  }
+
+  .popup-content button {
+    font-size: 0.95em;
+    padding: 0.6em 1em;
+  }
+
+  footer.share-banner {
+    font-size: 1em;
+    padding: 1em 0.5em;
+  }
+
+  .share-banner button {
+    font-size: 0.95em;
+    padding: 0.5em 1em;
+  }
+}
+
+
