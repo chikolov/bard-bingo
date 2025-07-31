@@ -36,31 +36,31 @@ body {
 
 .bingo-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Always 5 columns */
+  grid-template-columns: repeat(5, 1fr);
   gap: 0;
   width: 100%;
   max-width: 500px;
   margin: auto;
+box-sizing: border-box;
 }
 
-
 .bingo-cell {
- border: 1px solid #ccc;
+  border: 1px solid #ccc;
   padding: 1em;
-  margin: 0;                             /* remove spacing */
-  flex: 1 0 20%;
-  min-width: 100px;
-  height: 100px;
+  margin: 0;
+  aspect-ratio: 1 / 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 1.1em;
-  color: #c8102e;                        /* red text */
+  color: #c8102e;
   background-color: white;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
 }
+
 
 .bingo-cell.selected {
   background-color: #ddd;
