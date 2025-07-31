@@ -16,9 +16,9 @@ const allPromptSets = [
 ];
 
 function acceptTerms() {
-  document.getElementById("welcomePopup").style.display = "none";
-  document.getElementById("bingoContainer").style.display = "block";
-  document.getElementById("siteHeader").style.display = "block";
+  document.getElementById("welcomePopup").hidden = true;
+  document.getElementById("bingoContainer").hidden = false;
+  document.getElementById("siteHeader").hidden = false;
 }
 
 function shareBingo() {
@@ -29,17 +29,18 @@ function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-function checkBingo(grid) {
+function checkBingo() {
   const size = 5;
+  const grid = document.getElementById("bingoGrid");
   const winPatterns = [];
 
   for (let i = 0; i < size; i++) {
-    winPatterns.push([...Array(size).keys()].map(j => `${i}-${j}`));
-    winPatterns.push([...Array(size).keys()].map(j => `${j}-${i}`));
+    winPatterns.push(Array.from({ length: size }, (_, j) => `${i}-${j}`));
+    winPatterns.push(Array.from({ length: size }, (_, j) => `${j}-${i}`));
   }
 
-  winPatterns.push([...Array(size).keys()].map(i => `${i}-${i}`));
-  winPatterns.push([...Array(size).keys()].map(i => `${i}-${size - 1 - i}`));
+  winPatterns.push(Array.from({ length: size }, (_, i) => `${i}-${i}`));
+  winPatterns.push(Array.from({ length: size }, (_, i) => `${i}-${size - 1 - i}`));
 
   return winPatterns.some(pattern =>
     pattern.every(id => document.getElementById(id).classList.contains("selected"))
@@ -51,13 +52,13 @@ function createGrid(prompts) {
   grid.innerHTML = "";
 
   prompts.forEach((prompt, index) => {
-    const cell = document.createElement("div");
     const row = Math.floor(index / 5);
     const col = index % 5;
     const id = `${row}-${col}`;
+    const cell = document.createElement("div");
     cell.id = id;
-    cell.classList.add("bingo-cell");
-    cell.innerText = prompt;
+    cell.className = "bingo-cell";
+    cell.textContent = prompt;
 
     if (prompt === "Free Space") {
       cell.classList.add("selected");
@@ -65,8 +66,9 @@ function createGrid(prompts) {
 
     cell.addEventListener("click", () => {
       cell.classList.toggle("selected");
-      if (checkBingo(grid)) {
-        document.getElementById("congratsPopup").style.display = "flex";
+
+      if (checkBingo()) {
+        document.getElementById("congratsPopup").hidden = false;
       }
     });
 
@@ -77,10 +79,6 @@ function createGrid(prompts) {
 window.onload = () => {
   const randomVersion = allPromptSets[Math.floor(Math.random() * allPromptSets.length)];
   const shuffled = shuffle(randomVersion.filter(p => p !== "Free Space")).slice(0, 24);
-  shuffled.splice(12, 0, "Free Space");
-  const prompts = shuffled;
-  createGrid(prompts);
-
-  // Hide site header until terms are accepted
-  document.getElementById("siteHeader").style.display = "none";
+  shuffled.splice(12, 0, "Free Space"); // insert in center
+  createGrid(shuffled);
 };

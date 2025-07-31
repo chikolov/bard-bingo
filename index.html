@@ -5,37 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bard Bingo</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Welcome Popup -->
   <div id="welcomePopup" class="popup">
     <div class="popup-content">
       <h2>Welcome to Bard Bingo!</h2>
-      <p>This game aims to help you familiarize yourself with the Bard campus. <br> By clicking "Accept" you accept the responsibility to have fun. <br> By clicking "Accept" you accept the possible anonymous collection of data for the purpose of experience improvement. <br> Enjoy!</p>
+      <p>
+        This game aims to help you familiarize yourself with the Bard campus. <br>
+        By clicking "Accept" you accept the responsibility to have fun. <br>
+        By clicking "Accept" you accept the possible anonymous collection of data for experience improvement. <br>
+        Enjoy!
+      </p>
       <button onclick="acceptTerms()">Accept</button>
     </div>
   </div>
 
-  <div class="container" id="bingoContainer" style="display:none;">
-    <header class="site-header" id="siteHeader">
+  <!-- Main Container (hidden until terms accepted) -->
+  <div class="container" id="bingoContainer" hidden>
+    <header class="site-header" id="siteHeader" hidden>
       <h1>Welcome to Bard!</h1>
       <h2>A Place to Think, a Game to Play</h2>
     </header>
 
     <main>
       <div class="grid-wrapper">
- 	 <div class="bingo-grid" id="bingoGrid"></div>
+        <div class="bingo-grid" id="bingoGrid"></div>
       </div>
     </main>
 
     <footer class="share-banner">
       <p>Follow us on Instagram and TikTok @BardAdmission <br> #BardBingo</p>
-    <!-- <button onclick="shareBingo()">Share</button> -->
+      <!-- <button onclick="shareBingo()">Share</button> -->
     </footer>
   </div>
 
-  <div id="congratsPopup" class="popup" style="display:none;">
+  <!-- Congrats Popup -->
+  <div id="congratsPopup" class="popup" hidden>
     <div class="popup-content">
       <h2>Congrats!</h2>
       <p>You got Bingo!</p>

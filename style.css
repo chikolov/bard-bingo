@@ -1,3 +1,4 @@
+/* Reset and Base */
 * {
   margin: 0;
   padding: 0;
@@ -7,62 +8,80 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
   color: #333;
+  /* width: 100vw; height: 100vh; text-align: center; */
 }
 
+/* Container */
 .container {
-  padding: 2em;
+  width: 100%;
+  max-width: 900px;
+  padding: 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 2em; */
 }
 
+/* Header */
 .site-header {
+  width: 100%;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
-
-
-.site-header h1, .site-header h2 {
-  text-align: center;
-  color: #c8102e;
-  margin: 0.5em 0;
-}
-
 
 .site-header h1 {
-  font-size: 2.5em;
+  color: #c8102e;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
   font-weight: bold;
+  margin-bottom: 0.4em;
+  /* font-size: 2.5em; */
 }
 
 .site-header h2 {
-  font-size: 1.8em;
+  color: #c8102e;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
   font-weight: normal;
+  /* font-size: 1.8em; */
 }
 
+/* Grid Wrapper */
+.grid-wrapper {
+  width: 100%;
+  max-width: 90vmin;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; padding: 1rem; */
+}
+
+/* Bingo Grid */
 .bingo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  width: 90vmin;  /* Square grid, fits viewport */
-  height: 90vmin;
-  margin: 0 auto;
-  gap: 0;
+  width: 100%;
+  height: 100%;
+  gap: 2px;
+  /* width: 90vmin; height: 90vmin; */
 }
 
+/* Bingo Cell */
 .bingo-cell {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0.3em;
   border: 1px solid #ccc;
-  font-size: 1em;
+  font-size: clamp(0.8rem, 2.5vw, 1.1rem);
   color: #c8102e;
   background-color: white;
   transition: background-color 0.3s ease;
@@ -73,6 +92,7 @@ body {
   background-color: #ddd;
 }
 
+/* Popup */
 .popup {
   position: fixed;
   top: 0;
@@ -88,22 +108,25 @@ body {
 
 .popup-content {
   background: white;
-  padding: 2em;
-  border-radius: 16px;              /* was smaller */
+  padding: 1.5em;
+  border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   max-width: 90%;
-  font-size: 1.1em;                 /* slightly larger text */
+  font-size: 1em;
+  text-align: center;
 }
 
 .popup-content h2 {
   color: #c8102e;
-  font-size: 2em;
+  font-size: 1.8em;
   margin-bottom: 0.5em;
+  /* font-size: 2em; */
 }
 
 .popup-content p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #333;
+  /* font-size: 1.2em; */
 }
 
 .popup-content button {
@@ -117,13 +140,16 @@ body {
   margin-top: 1em;
 }
 
+/* Footer */
 footer.share-banner {
   background-color: #f2f2f2;
   text-align: center;
-  padding: 1em;
+  padding: 1em 0.5em;
   border-top: 2px solid #c8102e;
   margin-top: 2em;
-  font-size: 1.1em;
+  font-size: 1em;
+  width: 100%;
+  /* font-size: 1.1em; */
 }
 
 .share-banner button {
@@ -138,53 +164,12 @@ footer.share-banner {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.grid-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-
-/* ---------- Responsive Design for Mobile ---------- */
-
-/* Ensure the site scales on smaller devices */
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.container {
-  padding: 1em;
-}
-
-/* Make headers scale better on smaller screens */
-.site-header h1 {
-  font-size: clamp(1.5rem, 6vw, 2.5rem);
-}
-
-.site-header h2 {
-  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
-}
-
+/* Responsive Fixes */
 @media (max-width: 600px) {
-  .bingo-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2px;
-  }
-
-  .bingo-cell {
-    font-size: 0.9em;
-    padding: 0.5em;
-  }
-
   .popup-content {
-    padding: 1.5em;
+    padding: 1em;
     font-size: 1em;
   }
-
 
   .popup-content h2 {
     font-size: 1.5em;
@@ -200,8 +185,7 @@ body {
   }
 
   footer.share-banner {
-    font-size: 1em;
-    padding: 1em 0.5em;
+    font-size: 0.95em;
   }
 
   .share-banner button {
@@ -209,4 +193,3 @@ body {
     padding: 0.5em 1em;
   }
 }
-
