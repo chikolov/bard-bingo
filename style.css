@@ -37,27 +37,25 @@ body {
 .bingo-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  aspect-ratio: 1 / 1;              /* Keeps grid perfectly square */
   width: 100%;
   max-width: 500px;
-  margin: auto;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
 }
 
 .bingo-cell {
+  border: 1px solid #ccc;
+  color: #c8102e;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   font-size: 1.1em;
-  color: #c8102e;
-  background-color: white;
-  border: 1px solid #ccc;
-  transition: background-color 0.3s ease;
   box-sizing: border-box;
-
-  /* Make each cell square using aspect-ratio */
   aspect-ratio: 1 / 1;
-  width: 100%; /* This is handled by the grid, still good to keep */
+  overflow: hidden;
+  padding: 0.2em;
+  text-align: center;
 }
 
 .bingo-cell.selected {
@@ -157,8 +155,6 @@ body {
   }
 
   .bingo-cell {
-    min-width: auto;
-    height: 90px;
     font-size: 0.9em;
     padding: 0.5em;
   }
