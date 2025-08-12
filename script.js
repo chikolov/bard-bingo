@@ -1,7 +1,7 @@
 /*
   Bard Bingo
   Georgi Chikolov
-  Date: 2025-08-12
+  2025-08-12
 
   Description:
   Handles all game logic for displaying the bingo grid, tracking selections,
