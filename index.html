@@ -1,40 +1,66 @@
+<!-- 
+  Bard Bingo
+  Georgi Chikolov
+  Date: 2025-08-12
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bard Bingo</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Welome screen -->
   <div id="welcomePopup" class="popup">
     <div class="popup-content">
       <h2>Welcome to Bard Bingo!</h2>
-      <p>This game aims to help you familiarize yourself with the Bard campus. <br> By clicking "Accept" you accept the responsibility to have fun. <br> By clicking "Accept" you accept the possible anonymous collection of data for the purpose of experience improvement. <br> Enjoy!</p>
+      <p>
+        This game aims to help you familiarize yourself with the Bard campus. <br>
+        By clicking "Accept" you accept the responsibility to have fun. <br>
+        By clicking "Accept" you accept the possible anonymous collection of data for the purpose of experience improvement. <br>
+        Enjoy!
+      </p>
       <button onclick="acceptTerms()">Accept</button>
     </div>
   </div>
 
+  <!-- Main window, hidden until acceptance of welcome screen -->
   <div class="container" id="bingoContainer" style="display:none;">
     <header class="site-header" id="siteHeader">
       <h1>Welcome to Bard!</h1>
       <h2>A Place to Think, a Game to Play</h2>
     </header>
 
+    <!-- Bingo grid -->
     <main>
       <div class="grid-wrapper">
         <div class="bingo-grid" id="bingoGrid"></div>
       </div>
     </main>
 
+    <!-- Social Media Banner -->
     <footer class="share-banner">
-      <p>Follow us on Instagram and TikTok @BardAdmission <br> #BardBingo</p>
-      <!-- <button onclick="shareBingo()">Share</button> -->
+      <p>
+        Follow us on Instagram and TikTok 
+        <a href="https://instagram.com/BardAdmission" target="_blank">@BardAdmission</a> <br>
+        #BardBingo
+      </p>
+      <!-- Future feature: <button onclick="shareBingo()">Share</button> -->
     </footer>
   </div>
 
+  <!-- Winning screen -->
   <div id="congratsPopup" class="popup" style="display:none;">
     <div class="popup-content">
       <h2>Congrats!</h2>
@@ -43,6 +69,7 @@
     </div>
   </div>
 
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
