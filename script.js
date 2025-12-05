@@ -23,7 +23,7 @@ const allPromptSets = [
     "Berlin", "Farm", "Sushi Awarsei", "18 varsity sports teams", "SMOG",
     "Catskill mountains", "A student", "A professor", "Admission Counselor", "Chipmunk",
     "Squirrel", "Deer", "A Bard Sweatshirt",
-    "Scooter", "Ravines", "Tivoli Bays", "Blithewood", "CCS Hessel", "Bike"
+    "Scooter", "Ravines", "Tivoli Bays", "Blithewood", "CCS Hessel", "Bike", "Five Pillars", "L&T", "Hopson Cottage", "Pool Table"
   ]
 ];
 
