@@ -58,6 +58,13 @@ body {
   font-weight: normal;
 }
 
+.site-header h3 {
+  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+  color: #ad1a1f;
+  font-weight: normal;
+}
+
+
 /* ===== GRID ===== */
 .grid-wrapper {
   display: flex;
