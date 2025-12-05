@@ -21,8 +21,8 @@ const allPromptSets = [
   [
     "FYSEM", "CitSci", "Moderation", "Sproj", "Bard Network",
     "Berlin", "Farm", "Sushi Awarsei", "18 varsity sports teams", "SMOG",
-    "Catskill mountains", "A student", "A professor", "Admission Counselors (COD)", "Chipmunk",
-    "Squirrel", "Deer", "A Bard Sweatshirt", "Holidays", "Events (FOH and ASD)",
+    "Catskill mountains", "A student", "A professor", "Admission Counselor", "Chipmunk",
+    "Squirrel", "Deer", "A Bard Sweatshirt",
     "Scooter", "Ravines", "Tivoli Bays", "Blithewood", "CCS Hessel"
   ]
 ];
