@@ -61,9 +61,9 @@ body {
 .instructions {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.4;
-  color: #555;
+  color: #ad1a1f; /* Bard Red */
   text-align: center;
   margin: 10px auto 20px auto;
   max-width: 700px;
