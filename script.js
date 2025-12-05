@@ -20,7 +20,7 @@ const allPromptSets = [
   ],
   [
     "FYSEM", "CitSci", "Moderation", "Sproj", "Bard Network",
-    "Berlin", "Farm", "Halal Bros", "18 varsity sports teams", "SMOG",
+    "Berlin", "Farm", "Sushi Awarsei", "18 varsity sports teams", "SMOG",
     "Catskill mountains", "A student", "A professor", "Admission Counselors (COD)", "Chipmunk",
     "Squirrel", "Deer", "A Bard Sweatshirt", "Holidays", "Events (FOH and ASD)",
     "Scooter", "Ravines", "Tivoli Bays", "Blithewood", "CCS Hessel"

@@ -97,7 +97,8 @@ body {
   justify-content: center;
   text-align: center;
   border: 1px solid #ccc;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.7rem, 1.8vw, 0.9rem); /* slightly smaller */
+  text-transform: uppercase; /* make all text caps */
   padding: 0.4em;
   color: #ad1a1f;
   background-color: white;
