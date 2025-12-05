@@ -59,7 +59,7 @@ body {
 }
 
 .site-header h3 {
-  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+  font-size: clamp(1.0rem, 4.0vw, 1.5rem);
   color: #ad1a1f;
   font-weight: normal;
 }
