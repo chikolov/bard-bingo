@@ -59,9 +59,15 @@ body {
 }
 
 .site-header h3 {
-  font-size: clamp(1.0rem, 4.0vw, 1.5rem);
-  color: #ad1a1f;
-  font-weight: normal;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem; /* smaller font */
+  line-height: 1.4;   /* tighter line spacing */
+  color: #555;        /* lighter color to differentiate */
+  text-align: center;
+  margin: 10px auto 20px auto; /* small top margin, space below */
+  max-width: 700px;   /* keeps it narrow like a block */
+
 }
 
 
