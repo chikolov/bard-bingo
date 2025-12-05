@@ -16,14 +16,14 @@ const allPromptSets = [
     "Swings", "Post office", "MPR", "Toaster", "Heaviest doors on campus",
     "Learning Commons", "Stone smiley face by stone row", "Free Space", "Blue face on door of root cellar", "Blue boxes",
     "Leon", "Bard bucks", "Flags for Bard Houses", "Waterfall", "Crypt",
-    "Car on campus", "Shipping containers", "Bike racks", "Five Pillars", "L&T"
+    "Out of state license plate", "Shipping containers", "Bike racks", "Five Pillars", "L&T", "Hopson Cottage"
   ],
   [
     "FYSEM", "CitSci", "Moderation", "Sproj", "Bard Network",
     "Berlin", "Farm", "Sushi Awarsei", "18 varsity sports teams", "SMOG",
     "Catskill mountains", "A student", "A professor", "Admission Counselor", "Chipmunk",
     "Squirrel", "Deer", "A Bard Sweatshirt",
-    "Scooter", "Ravines", "Tivoli Bays", "Blithewood", "CCS Hessel"
+    "Scooter", "Ravines", "Tivoli Bays", "Blithewood", "CCS Hessel", "Bike"
   ]
 ];
 
